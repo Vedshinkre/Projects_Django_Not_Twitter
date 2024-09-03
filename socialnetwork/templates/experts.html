@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load unnest_json %}
+{% load static %}
+{% load highlight %}
+
+{% block title %}Experts{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1>Experts</h1>
+    {% if experts_data %}
+        {% for expertise_area, experts in experts_data.items %}
+            <div class="expertise-area">
+                <h2>{{ expertise_area }}</h2>
+                <ul>
+                    {% for expert in experts %}
+                        <li>
+                            <strong>{{ expert.user.username }}</strong> - Fame Level: {{ expert.fame_level_numeric }}
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>No experts found.</p>
+    {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load unnest_json %}
+
+{% load static %}
+{% load highlight %}
+
+{% block title %}Experts{% endblock %}
+
+{% block body %}
+
+  
+    <ul>
+        {% for area, experts in experts_data.items %}
+            <li>
+                <h2>{{ area }}</h2>
+                <ul>
+                    {% for expert in experts %}
+                        <li>{{ expert.user.username }} - Fame Level: {{ expert.fame_level_numeric }}</li>
+                    {% endfor %}
+                </ul>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
