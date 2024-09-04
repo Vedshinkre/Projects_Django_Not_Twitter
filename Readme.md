@@ -1,23 +1,23 @@
 
-##FameSocialNetwork Integration Project
+## FameSocialNetwork Integration Project
 This project is a Proof of Concept (POC) for integrating "Fame Profiles" into a social network, based on the ideas presented in the novel "Fameland" by Tom J. Petersson. The goal is to enhance social interactions by tracking users' skills and knowledge, and adjusting their ability to influence others based on their expertise. This project was developed as part of the Big Data Engineering course at Saarland University.
 
-##Project Overview
-#Fame Profiles
+## Project Overview
+# Fame Profiles
 In the FameSocialNetwork, each user has a "fame profile" that records and tracks their skills. These profiles help determine the influence a user has within the network, based on their expertise in various topics. Positive or negative fame can affect a user's ability to interact with the network, particularly in posting content.
 
-##Key Features
-#Fame Integration: Users' posts are evaluated based on their fame profiles, and posts that fall within a user's negative expertise areas are not published.
-#Fame Adjustment: The fame profile of a user is automatically adjusted when they post content with a negative truth rating.
-#Expert and Bullshitter Lists: The system can generate lists of users recognized as experts or bullshitters in specific areas based on their fame profiles.
-##Implemented Tasks
-#Task 1: Modify api.submit_post
+## Key Features
+# Fame Integration: Users' posts are evaluated based on their fame profiles, and posts that fall within a user's negative expertise areas are not published.
+# Fame Adjustment: The fame profile of a user is automatically adjusted when they post content with a negative truth rating.
+# Expert and Bullshitter Lists: The system can generate lists of users recognized as experts or bullshitters in specific areas based on their fame profiles.
+## Implemented Tasks
+# Task 1: Modify api.submit_post
 Behavior: Posts are only published if the user does not have negative fame in the related expertise area. The system also adjusts the user's fame based on the truth rating of the post.
-#Task 2: Fame Adjustment on Post Submission
+# Task 2: Fame Adjustment on Post Submission
 Fame Reduction: If a user posts content with a negative truth rating, their fame in the relevant area is reduced. If their fame cannot be lowered further, the user is banned from the platform.
-#Task 3: Expert List API
+# Task 3: Expert List API
 API Endpoint: Implemented an API that returns a ranked list of users who are considered experts in specific areas.
-#Task 4: Bullshitter List API
+# Task 4: Bullshitter List API
 API Endpoint: Implemented an API that returns a ranked list of users who are recognized as bullshitters in specific areas.
 
 ## Preliminary
