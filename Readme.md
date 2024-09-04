@@ -1,4 +1,4 @@
-# FameSocialNetwork Integration Project
+# FameSocialNetwork "Not Twitter"
 This project is a Proof of Concept (POC) for integrating "Fame Profiles" into a social network, based on the ideas presented in the novel "Fameland" by Tom J. Petersson. The goal is to enhance social interactions by tracking users' skills and knowledge, and adjusting their ability to influence others based on their expertise. This project was developed as part of the Big Data Engineering course at Saarland University.
 
 ## Project Overview
